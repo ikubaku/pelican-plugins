@@ -29,7 +29,7 @@ def fix_unicode(val):
         val = unicode(val.decode("utf-8"))
     else:
         # This fixes an issue with character substitutions, e.g. 'ñ' to 'Ã±'.
-        val = str.encode(val, "latin-1").decode("utf-8")
+        val = str.encode(val, "utf-8").decode("utf-8")
     return val
 
 ALLOWED_CMDS = ["asciidoc", "asciidoctor"]
